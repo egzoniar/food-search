@@ -9,11 +9,9 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   const options = { headerShown: false }
 
-
   return (
-    <Stack.Navigator
-      screenOptions={options}>
-      <Stack.Screen name='Business Search' component={SearchScreen} />
+    <Stack.Navigator>
+      <Stack.Screen options={options} name='Business Search' component={SearchScreen} />
       <Stack.Screen name='Single Item' component={SingleItem} />
     </Stack.Navigator>
   )

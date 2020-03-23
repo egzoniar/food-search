@@ -25,7 +25,6 @@ const SingleItem = ({ route }) => {
   return (
     (!result) ? null : (
       <SafeAreaView>
-        <Text>Single Item | name: {result.name}</Text>
         <FlatList
           data={result.photos}
           keyExtractor={photo => photo}

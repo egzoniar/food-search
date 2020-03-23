@@ -40,7 +40,7 @@ const SearchBar = ({ text, onTextChange, onSubmit, setText }) => {
         <TouchableOpacity
           style={styles.closeTouchable}
           onPress={() => setText('')}>
-          <AntDesign name="close" style={styles.closeIcon} />
+          <AntDesign name="close" style={{ ...styles.closeIcon, color }} />
         </TouchableOpacity>
       )}
     </View>
