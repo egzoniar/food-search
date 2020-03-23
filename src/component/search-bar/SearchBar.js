@@ -14,7 +14,7 @@ const SearchBar = ({ text, onTextChange, onSubmit, setText }) => {
   const focus = () => {
     setColor('#DB3F23');
     setBcgColor('#fff');
-    setElevation(9);
+    setElevation(5);
   }
   const unfocus = () => {
     setColor('black');

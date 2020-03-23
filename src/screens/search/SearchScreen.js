@@ -31,22 +31,10 @@ const SearchScreen = () => {
           onSubmit={() => searchApi(text)}
           setText={setText} />
         {errMsg ? <Text>{errMsg}</Text> : null}
-        <Text></Text>
-
-        {filterResultComponent(
-          <ResultList title="Cost Effective" results={filterResultByPrice('$')} />,
-          '$'
-        )}
-
-        {filterResultComponent(
-          <ResultList title="Bit Pricier" results={filterResultByPrice('$$')} />,
-          '$$'
-        )}
-
-        {filterResultComponent(
-          <ResultList title="Big Spender" results={filterResultByPrice('$$$')} />,
-          '$$$'
-        )}
+        {/* <Text style={{ borderWidth: 1 }}></Text> */}
+        <ResultList title="Cost Effective" results={filterResultByPrice('$')} />
+        <ResultList title="Bit Pricier" results={filterResultByPrice('$$')} />
+        <ResultList title="Big Spender" results={filterResultByPrice('$$$')} />
       </ScrollView>
     </SafeAreaView>
 

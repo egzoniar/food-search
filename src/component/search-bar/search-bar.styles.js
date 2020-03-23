@@ -5,18 +5,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0eeee',
     height: 50,
     borderRadius: 5,
-    marginTop: 17,
+    marginTop: 15,
+    marginBottom: 10,
     marginHorizontal: 15,
     display: "flex",
-    flexDirection: "row",
-    // borderWidth: 1,
-    // borderColor: 'blue'
+    flexDirection: "row"
   },
   input: {
     flex: 1,
-    fontSize: 17,
-    // borderWidth: 1,
-    // borderColor: 'red'
+    fontSize: 17
   },
   searchIcon: {
     fontSize: 25,
