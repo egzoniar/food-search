@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { View, TextInput, Alert } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { Feather, AntDesign } from '@expo/vector-icons';
 
 import styles from './search-bar.styles';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-const SearchBar = ({ text, onTextChange, onSubmit }) => {
+const SearchBar = ({ text, onTextChange, onSubmit, setText }) => {
   const [color, setColor] = useState('black');
   const [backgroundColor, setBcgColor] = useState('#f0eeee');
   const [elevation, setElevation] = useState(0);
@@ -23,7 +24,7 @@ const SearchBar = ({ text, onTextChange, onSubmit }) => {
 
   return (
     <View style={{ ...styles.container, elevation, backgroundColor }}>
-      <Feather name="search" style={{ ...styles.icon, color }} />
+      <Feather name="search" style={{ ...styles.searchIcon, color }} />
       <TextInput
         autoCapitalize="none"
         autoCorrect={false}
@@ -34,6 +35,14 @@ const SearchBar = ({ text, onTextChange, onSubmit }) => {
         onChangeText={onTextChange}
         onEndEditing={onSubmit}
         placeholder="Search" />
+
+      {(text === '') ? null : (
+        <TouchableOpacity
+          style={styles.closeTouchable}
+          onPress={() => setText('')}>
+          <AntDesign name="close" style={styles.closeIcon} />
+        </TouchableOpacity>
+      )}
     </View>
   )
 }
